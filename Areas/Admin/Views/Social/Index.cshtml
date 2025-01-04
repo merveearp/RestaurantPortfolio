@@ -1,0 +1,88 @@
+@model IEnumerable<SocialViewModel>
+@{
+    ViewData["Title"] = "Sosyal Medya";
+}
+
+ 
+ <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body"> 
+                <h6 class="card-title"> @(ViewBag.IsActive ?  "SOSYAL MEDYA " : "AKTİF OLMAYAN SOSYAL MEDYA SAYFASI")</h6> 
+                    <div class="">
+       @if (ViewBag.IsActive==true) 
+      {
+      <a asp-area="Admin" asp-controller="Social" asp-action="Index" asp-route-id="false" class="btn btn-danger btn-round"title="Aktif Olmayan Medyayı göster">
+      <i class="mdi mdi-chevron-double-up"></i>
+      </a>
+
+      }else
+      {
+      <a asp-area="Admin" asp-controller="Social" asp-action="Index" asp-route-id="true" class="btn btn-success btn-round"title="Aktif Medyayı Göster">
+      <i class="fas fa-check"></i>
+      </a>
+      }
+      <a asp-area="Admin" asp-controller="Social" asp-action="Create" class="btn btn-primary btn-round"title="Yeni Medya Oluştur">
+      <i class="mdi mdi-plus-circle-outline"></i>
+      </a>
+                    </div>  
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th> Id </th>
+                          <th> Name </th>   
+                          <th> URL</th>   
+                          <th> Icon </th>
+                          <th scope="col">Aktif</th>
+                        <th width="120">İşlemler<th> 
+                        </tr>
+                      </thead>
+                      <tbody>
+                        @foreach(var x in Model)
+                        {
+                        <tr> 
+                          <td>@x.Id</td>
+                          <td>@x.Name</td>
+                          <td>@x.Url</td>
+                          <td>
+                        <i class="@x.Icon"></i>
+                          </td>
+                      <td>         
+            <div class="form-check form-switch">
+            <input asp-for="@x.IsActive" class="form-check-input" type="checkbox" role="switch"id="isActive-@x.Id" onchange="changeIsActive(`@x.Id`)">
+             <label class="form-check-label" for="isActive-@x.Id"></label>
+                            
+            </div>
+            
+               </td>
+                          <td>               
+      <a asp-area="Admin"asp-controller="Social" asp-action="Update" asp-route-id="@x.Id" class="btn btn-warning btn-round"title="Düzelt">
+      <i class="mdi mdi-pencil-outline"></i>
+      </a>
+       <partial name="_SocialDeletePartial" model="@x"/>
+
+                     </td>
+                        </tr> 
+                        }
+                        
+                          
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+ <script>
+        function changeIsActive(socialId){
+            $.ajax({
+                url: `/admin/social/active/${socialId}`,
+                type: 'GET',
+                success: function(response){
+                    
+                    console.log(response==0 ?"İşlem başarısız": "İşlem başarılı");
+                },
+                error: function(error){
+                    console.log(error);
+                }
+            });
+        }
+    </script>
+              

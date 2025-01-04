@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+   @await Html.PartialAsync("_HeadPartial")
+</head>
+
+<body>
+    
+    @await Html.PartialAsync("_NavbarHeroPartial")
+   
+        @RenderBody()
+
+       @await Html.PartialAsync("_FooterPartial")
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    
+</body>
+@await Html.PartialAsync("_JsPartial")
+</html>

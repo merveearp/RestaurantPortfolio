@@ -1,0 +1,58 @@
+@model EditGeneralViewModel
+@{
+    ViewData["Title"] = "Genel Ayarlar";
+}
+
+<div class="container-fluid pt-4 px-4">
+    <form asp-area="Admin" asp-controller="AppSetting" asp-action="EditGeneralSettings" method="post"
+        enctype="multipart/form-data">
+        <input type="hidden" asp-for=HeroImageUrl>
+        <h6 class="text-primary display-6 text-center mb-5">Genel Ayarlar</h6>
+        <div class="row g-4 bg-light rounded h-100 p-4">
+            <div class="col-sm-12 col-xl-6">
+                <div class="mb-3">
+                    <label asp-for=BrandName class="form-label"></label>
+                    <input asp-for=BrandName class="form-control">
+                    <span asp-validation-for=BrandName class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for=HeroTitle class="form-label"></label>
+                    <input asp-for=HeroTitle class="form-control">
+                    <span asp-validation-for=HeroTitle class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-sm-12 col-xl-6">
+                <div class="mb-3">
+                    <label asp-for=HeroText class="form-label"></label>
+                    <input asp-for=HeroText class="form-control">
+                    <span asp-validation-for=HeroText class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for=HeroImage class="form-label"></label>
+                    <input class="form-control" type="file" asp-for=HeroImage id="HeroImage"
+                        accept="image/png,image/jpg,image/jpeg">
+                    <div class="mt-2">
+                        <img src="@Model.HeroImageUrl" id="hero-image-preview" width="100" height="100" />
+                    </div>
+                    <span asp-validation-for=HeroImage class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-sm-12 mt-3 text-end">
+                <a href="/admin/appsetting" class="btn btn-warning">Tüm Ayarlar</a>
+                <button type="submit" class="btn btn-success btn-icon" title="Kaydet">
+        <i class="fas fa-save"></i>
+                 </button>
+
+            </div>
+        </div>
+
+    </form>
+</div>
+
+ 
+    <script>
+        $("#HeroImage").on("change", function (event) {
+            const selectedFiles = event.target.files;
+            $("#hero-image-preview").attr("src", window.URL.createObjectURL(selectedFiles[0]));
+        });
+    </script>

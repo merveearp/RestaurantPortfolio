@@ -1,0 +1,26 @@
+﻿@model HomeModel
+        <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+                    @foreach(var x in Model.Abouts)
+                    {
+                  <div class="col-12 col-md-6 col-lg-6">
+                  <h6 class="text-warning">@x.Name</h6>
+                  <img class="img-fluid rounded w-100" data-wow-delay="0.1s" src="@x.AboutImageUrl">
+                 </div>
+                    }         
+                  </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h5 class="section-title ff-secondary text-start text-primary fw-normal">Hakkımızda</h5>
+                        <h1 class="mb-4"><i class="fa fa-utensils text-primary me-2"></i>Restoranımıza Hoşgeldiniz</h1>
+                        <p class="mb-4">@Html.Raw(Model.AppSetting.AboutText)</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->

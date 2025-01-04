@@ -1,0 +1,84 @@
+@model IEnumerable<MasterChefViewModel>
+@{
+    ViewData["Title"] = "MasterChef";
+}
+
+ <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body"> 
+                     <h6 class="card-title"> @(ViewBag.IsActive ?  "ŞEFLER" : "AKTİF OLMAYAN ŞEFLER SAYFASI")</h6> 
+     
+      @if (ViewBag.IsActive== true) 
+      {
+      <a asp-area="Admin" asp-controller="MasterChef" asp-action="Index" asp-route-id="false" class="btn btn-danger btn-round"title="Aktif Olmayan Şefleri göster">
+      <i class="mdi mdi-chevron-double-up"></i>
+      </a>
+
+      }else
+      {
+      <a asp-area="Admin" asp-controller="MasterChef" asp-action="Index" asp-route-id="true" class="btn btn-success btn-round"title="Aktif Şefleri Göster">
+      <i class="fas fa-check"></i>
+      </a>
+      }
+      <a asp-area="Admin" asp-controller="MasterChef" asp-action="Create" class="btn btn-primary btn-round"title="Yeni Şef Kaydı Oluştur">
+      <i class="mdi mdi-plus-circle-outline"></i>
+      </a>
+                    
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th> Şef Profili </th>
+                          <th> Id </th>
+                          <th> Şefin İsmi </th>
+                          <th> Şef Bilgisi </th>
+                          <th scope="col">Aktif</th>
+                        <th width="120">İşlemler<th> 
+                        </tr>
+                      </thead>
+                      <tbody>
+                      @foreach (var x in Model)
+{
+    <tr>
+        <td class="py-1">
+        <img src="@x.MasterChefsUrl" alt="image" />
+         </td>
+        <td>@x.Id</td>
+        <td>@x.Name</td>
+        <td>@x.ChefText</td>
+        <td> 
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="isActive-@x.Id"
+                    @(x.IsActive ? "checked" : "") 
+                    onchange="changeIsActive(@x.Id, this.checked)">
+                <label class="form-check-label" for="isActive-@x.Id"></label>
+            </div>
+        </td>
+        <td>
+            <a asp-area="Admin" asp-controller="MasterChef" asp-action="Update" asp-route-id="@x.Id" class="btn btn-warning btn-round" title="Düzelt">
+                <i class="mdi mdi-pencil-outline"></i>
+            </a>
+            <partial name="_MasterChefDeletePartial" model="@x" />
+        </td>
+    </tr>
+}
+
+                      </tbody>
+                    </table>
+                  
+                </div>
+              </div>
+<script>
+        function changeIsActive(masterChefId){
+            $.ajax({
+                url: `/admin/masterChef/active/${masterChefId}`,
+                type: 'GET',
+                success: function(response){
+                    
+                    console.log(response==0 ?"İşlem başarısız": "İşlem başarılı");
+                },
+                error: function(error){
+                    console.log(error);
+                }
+            });
+        }
+    </script>

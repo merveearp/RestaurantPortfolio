@@ -1,0 +1,87 @@
+﻿@model IEnumerable<MealViewModel>
+@{
+    ViewData["Title"] = "Yemek Menüsü";
+}
+ <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body"> 
+                     <h6 class="card-title"> @(ViewBag.IsActive ?  "YEMEK MENÜSÜ" : "AKTİF OLMAYAN YEMEK MENÜSÜ SAYFASI")</h6> 
+     
+      @if (ViewBag.IsActive == true) 
+      {
+      <a asp-area="Admin" asp-controller="Meal" asp-action="Index" asp-route-id="" class="btn btn-danger btn-round"title="Aktif Olmayan Yemekleri göster">
+      <i class="mdi mdi-chevron-double-up"></i>
+      </a>
+
+      }else
+      {
+      <a asp-area="Admin" asp-controller="Meal" asp-action="Index" asp-route-id="true" class="btn btn-success btn-round"title="Aktif Yemekleri Göster">
+      <i class="fas fa-check"></i>
+      </a>
+      }
+      <a asp-area="Admin" asp-controller="Meal" asp-action="Create" class="btn btn-primary btn-round"title="Yeni Yemek Kaydı Oluştur">
+      <i class="mdi mdi-plus-circle-outline"></i>
+      </a>
+                    
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th> Yemek Görseli </th>
+                          <th> Id </th>
+                          <th> Yemek İsmi </th>
+                          <th> Yemek İçeriği</th>
+                          <th> Kategori </th>
+                          <th> Fiyat </th>
+                          <th scope="col">Aktif</th>
+                        <th width="120">İşlemler<th> 
+                        </tr>
+                      </thead>
+                      <tbody>
+                      @foreach (var x in Model)
+{
+    <tr>
+        <td class="py-1">
+        <img src="@x.MealImageUrl" alt="image"/>
+         </td>
+        <td>@x.Id</td>
+        <td>@x.Name </td>
+        <td>@x.Ingredient</td>
+        <td>@x.CategoryName</td>
+        <td>@x.Price ₺</td>
+
+        <td> 
+            <div class="form-check form-switch">
+                                <input asp-for="@x.IsActive" class="form-check-input" type="checkbox" role="switch"
+                                    id="isActive-@x.Id" onchange="changeIsActive(`@x.Id`)">
+                                <label class="form-check-label" for="isActive-@x.Id"></label>
+                            </div>
+        </td>
+        <td>
+            <a asp-area="Admin" asp-controller="Meal" asp-action="Update" asp-route-id="@x.Id" class="btn btn-warning btn-round" title="Düzelt">
+                <i class="mdi mdi-pencil-outline"></i>
+            </a>
+            <partial name="_MealDeletePartial" model="@x" />
+        </td>
+    </tr>
+}
+
+                      </tbody>
+                    </table>
+                  
+                </div>
+              </div>
+    <script>
+        function changeIsActive(mealId) {
+            $.ajax({
+                url: `/admin/meal/active/${mealId}`,
+                type: 'GET',
+                success: function (response) {
+                    $("#update-isactive-message").text(response == 0 ? "İşlem başarısız" : "İşlem başarılı");
+                    console.log(response == 0 ? "İşlem başarısız" : "İşlem başarılı");
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+    </script>

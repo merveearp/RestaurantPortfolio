@@ -1,0 +1,61 @@
+﻿ <ul class="nav">
+            <li class="nav-item">
+              <a asp-area="Admin" asp-controller="Home"asp-action="Index" class="nav-link"aria-expanded="false" aria-controls="forms">
+                <span class="menu-title">Anasayfa</span>
+                <i class="mdi mdi-home-edit menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item nav-link">
+              <a asp-area="Admin"asp-controller="Category"asp-action="Index"asp-route-id="true"class="nav-link" aria-expanded="false" aria-controls="forms">
+                <span class="menu-title">Kategoriler</span>
+                <i class="mdi mdi-room-service-outline menu-icon"></i>  
+              </a> 
+            </li>
+           
+            <li class="nav-item nav-link">
+              <a asp-area="Admin" asp-controller="Service"asp-action="Index"asp-route-id="true" class="nav-link" aria-expanded="false" aria-controls="forms">
+                <span class="menu-title">Hizmetlerimiz</span>
+                <i class="mdi mdi-cards-variant menu-icon"></i>
+
+              </a>             
+            </li>   
+            <li class="nav-item nav-link">
+            <a asp-area="Admin" asp-controller="Social" asp-action="Index" asp-route-id="true" class ="nav-link" aria-expanded="false" aria-controls="tables">
+                <span class="menu-title">Sosyal Medya</span>
+                <i class="mdi mdi-folder-play menu-icon"></i>
+              </a>
+            </li>       
+            <li class="nav-item nav-link">
+              <a asp-area="Admin" asp-controller="Meal" asp-action="Index" asp-route-id="true" class="nav-link" aria-expanded="false" aria-controls="tables">
+                <span class="menu-title">Yemek Menüsü</span>
+                <i class="mdi mdi-silverware-fork-knife menu-icon"></i>
+              </a>
+            </li>              
+            <li class="nav-item nav-link">
+              <a asp-area="Admin" asp-controller="MasterChef" asp-action="Index" asp-route-id="true" class="nav-link" aria-expanded="false" aria-controls="icons">
+                <span class="menu-title">MasterChef</span>
+                <i class="mdi mdi-chef-hat menu-icon"></i>
+                
+              </a>
+              
+            </li> 
+            
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+                <span class="menu-title">Rezervasyon </span>
+                <i class="mdi mdi-card-account-phone menu-icon"></i> 
+              </a>
+            </li>
+            @* <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+                <span class="menu-title">Müşteri Yorumları</span>
+                <i class="mdi mdi-comment-account-outline menu-icon"></i> 
+              </a>   
+            </li>     *@
+             <li class="nav-item nav-link">
+              <a asp-area="Admin" asp-controller="AppSetting" asp-action="Index" class="nav-link" aria-expanded="false" aria-controls="icons">
+                <span class="menu-title">Ayarlar </span>
+                <i class="mdi mdi-cogs menu-icon"></i>
+              </a>  
+            </li>           
+          </ul>
