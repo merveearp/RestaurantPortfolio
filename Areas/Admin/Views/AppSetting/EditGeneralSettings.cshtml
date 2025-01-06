@@ -20,8 +20,23 @@
                     <input asp-for=HeroTitle class="form-control">
                     <span asp-validation-for=HeroTitle class="text-danger"></span>
                 </div>
+                <div class="mb-3">
+                    <label asp-for=AboutSubtitle class="form-label"></label>
+                    <input asp-for=AboutSubtitle class="form-control">
+                    <span asp-validation-for=AboutSubtitle class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for=AboutText class="form-label"></label>
+                    <input asp-for=AboutText class="form-control">
+                    <span asp-validation-for=AboutText class="text-danger"></span>
+                </div>
             </div>
             <div class="col-sm-12 col-xl-6">
+                <div class="mb-3">
+                    <label asp-for=MenuText class="form-label"></label>
+                    <input asp-for=MenuText class="form-control">
+                    <span asp-validation-for=MenuText class="text-danger"></span>
+                </div>
                 <div class="mb-3">
                     <label asp-for=HeroText class="form-label"></label>
                     <input asp-for=HeroText class="form-control">
@@ -48,7 +63,16 @@
 
     </form>
 </div>
-
+ 
+<link rel="stylesheet" href="~/admin/lib/summernote/summernote-bs5.min.css">
+<script src="~/admin/lib/summernote/summernote-bs5.min.js"></script>
+       
+    <script>
+        $(document).ready(function() {
+  $('#AboutText').summernote();
+});
+    </script>
+    
  
     <script>
         $("#HeroImage").on("change", function (event) {

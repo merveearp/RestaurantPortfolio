@@ -52,11 +52,14 @@
         <i class="fas fa-save"></i>
     </button>
 
+   @if(ViewBag.IsActive=true)
+{
     <!-- Vazgeç Butonu -->
-    <a asp-area="Admin" asp-controller="Social" asp-action="Index" 
+    <a asp-area="Admin" asp-controller="Social" asp-action="Index" asp-route-id="true" 
        class="btn btn-warning btn-icon d-flex align-items-center justify-content-center" title="Vazgeç">
         <i class="fas fa-close "></i>
     </a>
+}
 </div>                      
                 </form>
                         </div>

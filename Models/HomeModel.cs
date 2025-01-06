@@ -13,6 +13,7 @@ public class HomeModel
     public IEnumerable<Category>? Categories { get; set; }
     public IEnumerable<Meal>? Meals { get; set; }
     public IEnumerable<Client>? Clients { get; set; }
+     public IEnumerable<Reservation>? Reservations { get; set; }
     public Reservation? Reservation { get; set; }
     public string? ActivePage { get; set; }
 

@@ -22,12 +22,18 @@ public class EditGeneralViewModel
     public IFormFile? HeroImage { get; set; }  
 
     [Display(Name = "Hakkında Başlık")]
+    [Required(ErrorMessage = "Boş bırakılamaz")]
+
 	public string? AboutSubtitle {get;set;}
 
     [Display(Name = "Hakkında Bilgisi")]
+    [Required(ErrorMessage = "Boş bırakılamaz")]
+
 	public string? AboutText {get;set;}
 
     [Display(Name = "Menü Bilgisi")]
+    [Required(ErrorMessage = "Boş bırakılamaz")]
+
 	public string? MenuText {get;set;}
 
 }

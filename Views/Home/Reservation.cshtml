@@ -1,7 +1,12 @@
 @model HomeModel
 @{
     ViewData["Title"] = "Rezervasyon";
+    ReservationModel reservationModel=new()
+    {
+        AppSetting=Model.AppSetting
+    };
+    
 }
 <div>
-    @await Html.PartialAsync("_ReservationFormPartial")
+    @await Html.PartialAsync("_ReservationFormPartial",reservationModel)
 </div>

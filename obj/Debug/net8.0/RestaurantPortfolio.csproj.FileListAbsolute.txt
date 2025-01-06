@@ -207,3 +207,4 @@ C:\Users\Asus\Desktop\MVC-RESTAURANTAPP\RestaurantPortfolio - Kopya\obj\Debug\ne
 C:\Users\Asus\Desktop\MVC-RESTAURANTAPP\RestaurantPortfolio - Kopya\obj\Debug\net8.0\RestaurantPortfolio.pdb
 C:\Users\Asus\Desktop\MVC-RESTAURANTAPP\RestaurantPortfolio - Kopya\obj\Debug\net8.0\RestaurantPortfolio.genruntimeconfig.cache
 C:\Users\Asus\Desktop\MVC-RESTAURANTAPP\RestaurantPortfolio - Kopya\obj\Debug\net8.0\ref\RestaurantPortfolio.dll
+C:\Users\Asus\Desktop\MVC-RESTAURANTAPP\RestaurantPortfolio\obj\Debug\net8.0\RestaurantPortfolio.sourcelink.json

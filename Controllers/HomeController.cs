@@ -34,7 +34,7 @@ public class HomeController : Controller
 
         var categories =await _dbConnection.QueryAsync<Category>("SELECT*FROM Categories");
 
-        var reservations=(await _dbConnection.QueryAsync<Reservation>("SELECT*FROM Reservations ")).First();
+        // var reservations=(await _dbConnection.QueryAsync<Reservation>("SELECT*FROM Reservations ")).First();
         
         
      HomeModel model=new(){
@@ -45,7 +45,7 @@ public class HomeController : Controller
         MasterChefs=masterchefs,
         Clients=clients,
         Categories=categories,
-        Reservation=reservations,
+        // Reservation=reservations,
         ActivePage ="Ana Sayfa"
     
     };
@@ -118,29 +118,51 @@ public class HomeController : Controller
         return View(model);
     
   }
+  
+  [HttpGet]
    public async Task<IActionResult> Reservation()
     {
         var appSettings=(await _dbConnection.QueryAsync<AppSetting>("SELECT*FROM AppSettings")).First();
-
-        
+    
         var socials=await _dbConnection.QueryAsync<Social>("SELECT*FROM Socials WHERE IsActive=1"); 
-
-        var reservations=(await _dbConnection.QueryAsync<Reservation>("SELECT*FROM Reservations ")).First();
+        
 
         HomeModel model =new()
         {
             AppSetting=appSettings,
             Socials=socials,
-            Reservation=reservations,
             ActivePage="Rezervasyon"
 
         };
 
         return View(model);
-        
-
-    
 
     }
+
+[HttpPost]
+public async Task<IActionResult> Reservation(Reservation reservation)
+{
+    if (!ModelState.IsValid)
+    {
+        var appSettings=(await _dbConnection.QueryAsync<AppSetting>("SELECT*FROM AppSettings")).First();
+   
+        var socials=await _dbConnection.QueryAsync<Social>("SELECT*FROM Socials WHERE IsActive=1"); 
+
+
+        HomeModel model =new()
+        {
+            AppSetting=appSettings,
+            Socials=socials,
+            Reservation=reservation,
+            ActivePage="Rezervasyon"
+
+        };
+
+        return View(reservation);
+    }
+    reservation.SendingTime=DateTime.Now;
+    var result =await _dbConnection.ExecuteAsync( "INSERT INTO Reservations (Name, Email, PhoneNumber, PeopleCount, ReservationDate) VALUES (@Name, @Email, @PhoneNumber, @PeopleCount, @ReservationDate)", reservation);
+    return RedirectToAction("Index");
+}
 
 }

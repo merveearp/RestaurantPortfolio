@@ -1,0 +1,52 @@
+@model Reservation
+
+@{
+    ViewData["Title"] = "Rezervasyon Detayı";
+}
+
+<div class="container mt-5">
+    <h2>@ViewData["Title"]</h2>
+    <form asp-area="Admin" asp-controller="Reservation" asp-action="SetUnread" method="post">
+        <input type="hidden" asp-for="Id" />
+
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Adı</label>
+            <input asp-for="Name" class="form-control" readonly />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label">Email</label>
+            <input asp-for="Email" class="form-control" readonly />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="PhoneNumber" class="form-label">Telefon Numarası</label>
+            <input asp-for="PhoneNumber" class="form-control" readonly />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="PeopleCount" class="form-label">Kişi Sayısı</label>
+            <input asp-for="PeopleCount" class="form-control" readonly />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="ReservationDate" class="form-label">Rezervasyon Tarihi</label>
+            <input asp-for="ReservationDate" class="form-control" readonly />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="SendingTime" class="form-label">Gönderim Zamanı</label>
+            <input asp-for="SendingTime" class="form-control" readonly />
+        </div>
+
+        <div class="form-check">
+            <input asp-for="IsRead" class="form-check-input" disabled />
+            <label asp-for="IsRead" class="form-check-label">Okundu</label>
+        </div>
+
+        <div class="mt-4">
+            <button type="submit" class="btn btn-warning">Okunmadı Olarak İşaretle</button>
+            <a asp-area="Admin" asp-controller="Reservation" asp-action="Index" class="btn btn-secondary">Geri Dön</a>
+        </div>
+    </form>
+</div>

@@ -40,13 +40,16 @@
     <button type="submit" class="btn btn-success btn-icon" title="Kaydet">
         <i class="fas fa-save"></i>
     </button>
-
-    <!-- Vazgeç Butonu -->
+    @if(ViewBag.IsActive=true)
+    {
+      <!-- Vazgeç Butonu -->
     
-                    <a asp-area="Admin" asp-controller="Category" asp-action="Index"
+                    <a asp-area="Admin" asp-controller="Category" asp-action="Index" asp-route-id="true"
                        class="btn btn-warning btn-icon d-flex align-items-center justify-content-center" title="Vazgeç">
                         <i class="fas fa-close"></i>
-                    </a>                
+                    </a>         
+    }
+             
             </div>                
                 </form>
                         </div>

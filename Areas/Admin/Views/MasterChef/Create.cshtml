@@ -46,11 +46,14 @@
     </button>
 
     <!-- Vazgeç Butonu -->
-    
-      <a asp-area="Admin" asp-controller="MasterChef" asp-action="Index" 
+    @if(ViewBag.IsActive=true)
+    {
+        <a asp-area="Admin" asp-controller="MasterChef" asp-action="Index" asp-route-id="true"
        class="btn btn-warning btn-icon d-flex align-items-center justify-content-center" title="Vazgeç">
         <i class="fas fa-close "></i>
-    </a>  
+    </a>   
+    }
+     
     
     
 </div>                      

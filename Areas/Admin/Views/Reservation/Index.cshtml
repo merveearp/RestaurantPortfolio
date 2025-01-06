@@ -1,0 +1,55 @@
+@model IEnumerable<Reservation>
+@{
+    ViewData["Title"] = "Rezervasyon Listesi";
+}
+<div class="mt-4">
+    <a asp-area="Admin" asp-controller="Reservation" asp-action="Index" asp-route-id="@null" class="btn btn-outline-primary">
+        Tüm Rezervasyonlar
+    </a>
+    <a asp-area="Admin" asp-controller="Reservation" asp-action="Index" asp-route-id="false" class="btn btn-outline-warning">
+        Okunmayanlar
+    </a>
+    <a asp-area="Admin" asp-controller="Reservation" asp-action="Index" asp-route-id="true" class="btn btn-outline-success">
+        Okunanlar
+    </a>
+</div>
+
+
+<h3>@ViewData["Title"]</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Adı</th>
+            <th>Email</th>
+            <th>Kişi Sayısı</th>
+            <th>Rezervasyon Tarihi</th>
+            <th>Durum</th>
+            <th>İşlem</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Email</td>
+                <td>@item.PeopleCount</td>
+                <td>@item.ReservationDate.ToShortDateString()</td>
+                <td>@(item.IsRead ? "Okundu" : "Okunmadı")</td>
+                <td>
+                    <a asp-area="Admin" asp-controller="Reservation" asp-action="Read" asp-route-id="@item.Id" class="btn btn-info btn-sm">
+                        Oku
+                    </a>
+                    @if (item.IsRead)
+                    {
+                        <a asp-area="Admin" asp-controller="Reservation" asp-action="SetUnread" asp-route-id="@item.Id" class="btn btn-warning btn-sm">
+                            Okunmadı Yap
+                        </a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
