@@ -28,7 +28,6 @@ public class MealUpdateViewModel
    
     [Display(Name ="Fiyat")]
     [Required(ErrorMessage ="Fiyat bilgisi eklenmelidir.")]
-
 	public int Price {get;set;}
 
     [Display(Name ="Aktif")]

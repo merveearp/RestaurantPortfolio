@@ -8873,6 +8873,14 @@
       "PackagePath": "staticwebassets\\ui\\img\\masterchefs\\1209e776-02fc-4744-9a5f-aad6b7fa5e21.jpg"
     },
     {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\masterchefs\\229c4979-ca26-4867-ae39-348cd12940c2.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\masterchefs\\229c4979-ca26-4867-ae39-348cd12940c2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\masterchefs\\27889902-e819-427d-9ca6-b6bef6bd6e51.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\masterchefs\\27889902-e819-427d-9ca6-b6bef6bd6e51.jpg"
+    },
+    {
       "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\masterchefs\\3047dcd9-7245-43f0-932c-c01f48ba4381.jpg",
       "PackagePath": "staticwebassets\\ui\\img\\masterchefs\\3047dcd9-7245-43f0-932c-c01f48ba4381.jpg"
     },
@@ -8891,6 +8899,146 @@
     {
       "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\masterchefs\\71920fd2-0cc6-4cd7-9286-19b4764e7b5a.jpg",
       "PackagePath": "staticwebassets\\ui\\img\\masterchefs\\71920fd2-0cc6-4cd7-9286-19b4764e7b5a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\masterchefs\\e46af3a9-a615-4304-9c9e-38c1137d76a7.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\masterchefs\\e46af3a9-a615-4304-9c9e-38c1137d76a7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\masterchefs\\eb6209c6-9be9-42bc-ba00-d1fdc04bb48f.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\masterchefs\\eb6209c6-9be9-42bc-ba00-d1fdc04bb48f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\010c4f1f-8f4c-4834-838e-f454aab6eb44.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\010c4f1f-8f4c-4834-838e-f454aab6eb44.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\01af3797-7a8e-426d-b4d1-103c1a1377b2.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\01af3797-7a8e-426d-b4d1-103c1a1377b2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\0652cf60-0763-4dfa-9ef5-59b7d9beab22.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\0652cf60-0763-4dfa-9ef5-59b7d9beab22.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\079889be-b1fa-46e9-8108-1f417e8b7a23.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\079889be-b1fa-46e9-8108-1f417e8b7a23.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\07a75e9f-a519-4582-a868-1bca9baf69cd.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\07a75e9f-a519-4582-a868-1bca9baf69cd.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\0c91e2a4-c0eb-4a04-8b63-8ad7e2d5975f.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\0c91e2a4-c0eb-4a04-8b63-8ad7e2d5975f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\214cce39-8143-4947-b93c-608e8b4a90f2.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\214cce39-8143-4947-b93c-608e8b4a90f2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\23813176-f310-4216-9784-e2912e45a4d0.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\23813176-f310-4216-9784-e2912e45a4d0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\2df7494d-4369-4dc0-97fc-a5aed2f24ab9.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\2df7494d-4369-4dc0-97fc-a5aed2f24ab9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\30d153e9-62e8-45d8-ab6f-350c91b2ac8b.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\30d153e9-62e8-45d8-ab6f-350c91b2ac8b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\35c9e24a-48ac-4d2b-a582-48e4550c2d8f.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\35c9e24a-48ac-4d2b-a582-48e4550c2d8f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\3774f14d-c9d5-435b-a405-1a8972b2ee83.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\3774f14d-c9d5-435b-a405-1a8972b2ee83.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\39119770-6a9d-44eb-bd0e-d7061ee307ba.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\39119770-6a9d-44eb-bd0e-d7061ee307ba.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\43afa54a-20bc-4a85-9943-2c0a3ca829dd.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\43afa54a-20bc-4a85-9943-2c0a3ca829dd.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\5277434d-969a-484f-8e53-426aa99d9ba6.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\5277434d-969a-484f-8e53-426aa99d9ba6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\55223bae-64c4-43e1-8dd4-9883dd6a16ad.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\55223bae-64c4-43e1-8dd4-9883dd6a16ad.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\661b4941-6737-4f48-adc1-8a37b4267304.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\661b4941-6737-4f48-adc1-8a37b4267304.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\66601a57-f7e8-4182-afe1-9d909f12dad7.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\66601a57-f7e8-4182-afe1-9d909f12dad7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\6d10a0a2-1331-4e3f-8c23-ef9eefade84d.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\6d10a0a2-1331-4e3f-8c23-ef9eefade84d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\731413f8-c3d8-4a0e-bafb-a67a179605a0.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\731413f8-c3d8-4a0e-bafb-a67a179605a0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\82836635-d55d-4ca9-81d8-46c1f0760230.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\82836635-d55d-4ca9-81d8-46c1f0760230.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\84d2ed39-20b3-43b8-a381-089eab3a82e4.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\84d2ed39-20b3-43b8-a381-089eab3a82e4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\8be48682-2122-4c5d-a17f-b3b321384123.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\8be48682-2122-4c5d-a17f-b3b321384123.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\909a3572-554a-4c11-81a8-558dc99911d8.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\909a3572-554a-4c11-81a8-558dc99911d8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\94341634-5068-4404-9069-7f4077e316f9.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\94341634-5068-4404-9069-7f4077e316f9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\a7aad186-5a0a-44e2-91c8-81bcb0a5ca73.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\a7aad186-5a0a-44e2-91c8-81bcb0a5ca73.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\b48af0b2-ef8a-4eaa-88d2-cb32f28b76af.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\b48af0b2-ef8a-4eaa-88d2-cb32f28b76af.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\b568cc9c-c79e-4758-9b0b-d920e5414dba.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\b568cc9c-c79e-4758-9b0b-d920e5414dba.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\c5ed5943-07eb-416a-83a6-773d1096a4f6.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\c5ed5943-07eb-416a-83a6-773d1096a4f6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\c9c9511a-491e-4eb3-ad77-ee015ee07333.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\c9c9511a-491e-4eb3-ad77-ee015ee07333.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\dbac7a99-09ea-4b3b-b8e5-0884eb1cb0e4.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\dbac7a99-09ea-4b3b-b8e5-0884eb1cb0e4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\e384af10-a40c-4d33-8766-9f56878ea69f.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\e384af10-a40c-4d33-8766-9f56878ea69f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\meals\\e4c130d1-3da8-4c8e-aa81-ececb93b8a0b.jpg",
+      "PackagePath": "staticwebassets\\ui\\img\\meals\\e4c130d1-3da8-4c8e-aa81-ececb93b8a0b.jpg"
     },
     {
       "Id": "C:\\Users\\Asus\\Desktop\\MVC-RESTAURANTAPP\\RestaurantPortfolio\\wwwroot\\ui\\img\\mekan.jpg",

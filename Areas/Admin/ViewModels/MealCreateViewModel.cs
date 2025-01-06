@@ -18,6 +18,7 @@ public class MealCreateViewModel
 
     [Display(Name ="Yemek Görseli")]
 	public string? MealImageUrl {get;set;}
+
     // public IFormFile? Image { get; set; }
 	public int CategoryId {get;set;}
 	public string? CategoryName {get;set;}

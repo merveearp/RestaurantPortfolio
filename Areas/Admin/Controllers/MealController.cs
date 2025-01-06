@@ -56,7 +56,7 @@ namespace RestaurantPortfolio.Areas.Admin.Controllers
             return View(model);
 
         }
-                [HttpPost]
+        [HttpPost]
         public async Task<ActionResult> Create(MealCreateViewModel model,IFormFile image)
         {
             
@@ -86,11 +86,14 @@ namespace RestaurantPortfolio.Areas.Admin.Controllers
             var meal =await _mealRepository.GetByIdAsync(id);
 
             if(meal !=null){
-             MealUpdateViewModel mealUpdateViewModel =new (){
+            MealUpdateViewModel mealUpdateViewModel =new (){
             Id=meal.Id,
             Name=meal.Name,
             Ingredient=meal.Ingredient,
+            Price=meal.Price,
+            CategoryId=meal.CategoryId,
             MealImageUrl=meal.MealImageUrl,
+            IsActive=meal.IsActive,
             UpdatedDate=meal.UpdatedDate.Year==1 ? null :meal.UpdatedDate,
             CategoryList=await GenerateCategoryListAsync()
             };

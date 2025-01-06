@@ -20,30 +20,62 @@ public class MealRepository
     }
     public async Task<IEnumerable<MealViewModel>> GetAllAsync()
     {
-        string query="SELECT Id,Name,CategoryName,Ingredient,MealImageUrl,Price,IsActive FROM Meals ";
+        string query=@"
+        SELECT 
+        m.Id,
+        m.Name,
+        c.Name AS CategoryName,
+        m.Ingredient,
+        m.MealImageUrl,
+        m.Price,
+        m.IsActive
+         FROM Meals m JOIN Categories c
+            ON m.CategoryId=c.Id
+         ";
         return await _dbConnection.QueryAsync<MealViewModel>(query);
     }
     public async Task<IEnumerable<MealViewModel>> GetAllAsync(bool isActive)
     {
-        string query="SELECT Id,Name,CategoryName,Ingredient,MealImageUrl,Price,IsActive FROM Meals WHERE IsActive=@IsActive";
+        string query=@"
+        SELECT 
+        m.Id,
+        m.Name,
+        c.Name AS CategoryName,
+        m.Ingredient,
+        m.MealImageUrl,
+        m.Price,
+        m.IsActive
+         FROM Meals m JOIN Categories c
+            ON m.CategoryId=c.Id
+          WHERE m.IsActive=@IsActive
+          ";
         return await _dbConnection.QueryAsync<MealViewModel>(query, new {IsActive=isActive});
 
     }
     public async Task<Meal?> GetByIdAsync(int id)
     {
-        string query=" SELECT*FROM Meals WHERE Id=@Id ";
-        return await _dbConnection.QueryFirstOrDefaultAsync<Meal?>
-        (query , new{Id=id});
+        string query=@" SELECT Id,Name,CategoryName,Ingredient,MealImageUrl,Price,IsActive FROM Meals WHERE Id=@Id ";
+        return await _dbConnection.QueryFirstOrDefaultAsync<Meal?>(query , new{Id=id});
 
     }
     public async Task CreateAsync(MealCreateViewModel meal)
     {
-        string query ="INSERT INTO Meals (Name,Ingredient,MealImageUrl,CategoryId,CategoryName,Price,IsActive) VALUES (@Name,@Ingredient,@MealImageUrl,@CategoryId,@CategoryName,@Price,@IsActive) ";
+        string query ="INSERT INTO Meals (Name,Ingredient,CategoryId,CategoryName,MealImageUrl,Price,IsActive) VALUES (@Name,@Ingredient,@CategoryId,@CategoryName,@MealImageUrl,@Price,@IsActive) ";
         await _dbConnection.ExecuteAsync(query,meal);
     }
     public async Task UpdateAsync(MealUpdateViewModel meal)
     {
-        string query="UPDATE MasterChefs SET Name=@Name,ChefText=@ChefText,MasterChefsUrl=@MasterChefsUrl,UpdatedDate=@UpdatedDate,IsActive=@IsActive WHERE Id=@Id";
+        string query=@"
+        UPDATE Meals 
+        SET 
+        Name=@Name,
+        Ingredient=@Ingredient,
+        CategoryId=@CategoryId,
+        MealImageUrl=@MealImageUrl,
+        Price=@Price,
+        UpdatedDate=@UpdatedDate,
+        IsActive=@IsActive
+        WHERE Id=@Id";
         meal.UpdatedDate=DateTime.Now;
         await _dbConnection.ExecuteAsync(query,meal);
     }
